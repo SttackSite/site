@@ -456,7 +456,7 @@ st.markdown("""
         <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
             <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/13.png" alt="Template 6">
         </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
+        <a href="https://sttacktemplate1.streamlit.app/" target="_blank" class="carousel-item-link">
             <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/1.png" alt="Template 7">
         </a>
         <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
