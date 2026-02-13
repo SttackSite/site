@@ -623,6 +623,6 @@ st.markdown('</div>', unsafe_allow_html=True)
 # --- FOOTER ---
 st.markdown("""
 <div style="padding: 60px 8%; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 10px; opacity: 0.4; letter-spacing: 5px;">
-    STTACK SITE - DOMINANDO A WEB DESDE 2019
+    STTACK SITE ® - DOMINANDO A WEB DESDE 2019. Todos os direitos reservados
 </div>
 """, unsafe_allow_html=True)
