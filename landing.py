@@ -2,7 +2,7 @@ import streamlit as st
 
 # --- CONFIGURAÇÃO DA PÁGINA ---
 st.set_page_config(
-    page_title="Site Pro Elite | Templates Fora de Série",
+    page_title="Sttack Site",
     page_icon="💎",
     layout="wide"
 )
@@ -43,7 +43,7 @@ st.markdown("""
         letter-spacing: -1px;
     }
 
-    /* ❌ NÃO ALTERE: NAVBAR ESTILO YOLU ADAPTADO PARA SITE PRO ELITE */
+    /* ❌ NÃO ALTERE: NAVBAR ESTILO YOLU ADAPTADO PARA SITE STTACK */
     .navbar-elite {
         display: flex;
         justify-content: space-between;
@@ -342,7 +342,7 @@ st.markdown("""
 # --- NAVBAR ELITE ---
 st.markdown("""
 <div class="navbar-elite">
-    <div class="logo-elite">Site Pro Elite</div>
+    <div class="logo-elite">STTACK SITE</div>
     <div class="nav-links-container">
         <a href="#clientes" class="nav-link-elite">Clientes</a>
         <a href="#quem-atendemos" class="nav-link-elite">Quem Atendemos</a>
@@ -623,6 +623,6 @@ st.markdown('</div>', unsafe_allow_html=True)
 # --- FOOTER ---
 st.markdown("""
 <div style="padding: 60px 8%; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 10px; opacity: 0.4; letter-spacing: 5px;">
-    SITE PRO ELITE // DOMINANDO A WEB EM 2026
+    STTACK SITE - DOMINANDO A WEB DESDE 2019
 </div>
 """, unsafe_allow_html=True)
