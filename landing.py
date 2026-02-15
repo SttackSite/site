@@ -439,10 +439,10 @@ st.markdown("""
 <div class="carousel-section">
     <div class="carousel-container">
         <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/SttackSite/site/main/testeimagem1.png" alt="Template 1">
+            <img src="https://raw.githubusercontent.com/SttackSite/site/main/20.png" alt="Template 1">
         </a>
         <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/17.png" alt="Template 2">
+            <img src="https://raw.githubusercontent.com/SttackSite/site/main/testeimagem1.png" alt="Template 2">
         </a>
         <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
             <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/24.png" alt="Template 3">
