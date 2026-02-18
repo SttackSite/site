@@ -140,7 +140,7 @@ st.markdown("""
         font-size: 30px;
     }
 
-    /* CARROSSEL HORIZONTAL - APENAS IMAGENS GRANDES */
+    /* GRID 2D COM SCROLL HORIZONTAL E VERTICAL */
     .carousel-section {
         padding: 120px 8%;
         background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 100%);
@@ -157,14 +157,17 @@ st.markdown("""
         letter-spacing: -2px;
     }
 
+    /* ❌ NÃO ALTERE: Container principal com scroll 2D */
     .carousel-container {
         display: flex;
-        gap: 40px;
+        gap: 20px;
         overflow-x: auto;
+        overflow-y: hidden;
         padding: 20px 0;
         scroll-behavior: smooth;
         scrollbar-width: thin;
         scrollbar-color: var(--gold) transparent;
+        height: 900px;
     }
 
     .carousel-container::-webkit-scrollbar {
@@ -182,16 +185,7 @@ st.markdown("""
 
     /* ❌ NÃO ALTERE: Link do item do carrossel */
     .carousel-item-link {
-        display: block;
-        flex: 0 0 calc(33.333% - 27px);
-        min-width: 705px;
-        height: 315px;
-        border-radius: 8px;
-        overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        transition: all 0.4s ease;
-        cursor: pointer;
-        text-decoration: none;
+        display: none;
     }
 
     /* ❌ NÃO ALTERE: Efeito hover no link do carrossel */
@@ -201,26 +195,42 @@ st.markdown("""
         box-shadow: 0 30px 80px rgba(212, 175, 55, 0.3);
     }
 
+    /* ❌ NÃO ALTERE: Container de cada template com scroll vertical */
     .carousel-item-image-only {
-        flex: 0 0 calc(33.333% - 27px);
-        min-width: 705px;
-        height: 315px;
+        flex: 0 0 800px;
+        min-width: 800px;
+        height: 900px;
         border-radius: 8px;
-        overflow: hidden;
+        overflow-y: auto;
+        overflow-x: hidden;
         border: 1px solid rgba(255, 255, 255, 0.1);
         transition: all 0.4s ease;
         cursor: pointer;
+        background: rgba(255, 255, 255, 0.02);
     }
 
     .carousel-item-image-only:hover {
         border-color: var(--gold);
-        transform: translateY(-15px);
         box-shadow: 0 30px 80px rgba(212, 175, 55, 0.3);
+    }
+
+    /* ❌ NÃO ALTERE: Scrollbar vertical de cada template */
+    .carousel-item-image-only::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .carousel-item-image-only::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .carousel-item-image-only::-webkit-scrollbar-thumb {
+        background: var(--gold);
+        border-radius: 3px;
     }
 
     .carousel-item-image-only img {
         width: 100%;
-        height: 100%;
+        height: auto;
         object-fit: cover;
         display: block;
         border-radius: 8px;
@@ -336,6 +346,49 @@ st.markdown("""
         margin-right: 10px;
         color: var(--gold);
     }
+
+    /* ✅ CONTAINER COM SCROLL VERTICAL PARA TEMPLATES */
+    .template-scroll-container {
+        width: 100%;
+        max-width: 1000px;
+        height: 800px;
+        margin: 0 auto;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        background: rgba(255, 255, 255, 0.02);
+        padding: 0;
+        scroll-behavior: smooth;
+    }
+
+    /* ✅ SCROLLBAR ESTILIZADA */
+    .template-scroll-container::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    .template-scroll-container::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+    }
+
+    .template-scroll-container::-webkit-scrollbar-thumb {
+        background: var(--gold);
+        border-radius: 10px;
+        border: 2px solid rgba(5, 5, 5, 0.5);
+    }
+
+    .template-scroll-container::-webkit-scrollbar-thumb:hover {
+        background: #e8c547;
+    }
+
+    /* ✅ IMAGEM DENTRO DO CONTAINER */
+    .template-scroll-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 0;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -374,6 +427,11 @@ st.markdown("""
         <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-checkout/main/8.jpg" style="width:80px; height:80px; border-radius:50%; border: 2px solid var(--accent); margin-left: -20px;">
         <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-checkout/main/6.jpg" style="width:80px; height:80px; border-radius:50%; border: 2px solid var(--accent); margin-left: -20px;">
         <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-checkout/main/17.png" style="width:80px; height:80px; border-radius:50%; border: 2px solid var(--accent); margin-left: -20px;">
+        <img src="https://raw.githubusercontent.com/SttackSite/site/main/410.png" style="width:80px; height:80px; border-radius:50%; border: 2px solid var(--accent); margin-left: -20px;">
+        <img src="https://raw.githubusercontent.com/SttackSite/site/main/413.jpg" style="width:80px; height:80px; border-radius:50%; border: 2px solid var(--accent); margin-left: -20px;">
+        <img src="https://raw.githubusercontent.com/SttackSite/site/main/414.jpg" style="width:80px; height:80px; border-radius:50%; border: 2px solid var(--accent); margin-left: -20px;">
+        <img src="https://raw.githubusercontent.com/SttackSite/site/main/415.jpg" style="width:80px; height:80px; border-radius:50%; border: 2px solid var(--accent); margin-left: -20px;">
+        <img src="https://raw.githubusercontent.com/SttackSite/site/main/422.jpg" style="width:80px; height:80px; border-radius:50%; border: 2px solid var(--accent); margin-left: -20px;">
         <div style="width:80px; height:80px; border-radius:50%; background: var(--accent); margin-left: -20px; display:flex; align-items:center; justify-content:center; font-weight:900;">+500</div>
     </div>
 </div>
@@ -432,96 +490,33 @@ for i, (title, desc) in enumerate(steps):
 st.markdown('</div>', unsafe_allow_html=True)
 
 
-# --- 3 & 4. SHOWCASE DE TEMPLATES (GRID ASSIMÉTRICO) ---
+# --- 3 & 4. SHOWCASE DE TEMPLATES (GRID 2D COM SCROLL) ---
 st.markdown('<div id="templates" style="padding: 120px 8%;">', unsafe_allow_html=True)
-st.markdown('<h2>Clique e explore o template que mais combina com <span class="serif-heavy"> seu negócio:</span></h2><br><br>', unsafe_allow_html=True)
+st.markdown('<h2>Deslize e explore alguns dos nossos templates ideais para <span class="serif-heavy"> seu negócio:</span></h2><br><br>', unsafe_allow_html=True)
 st.markdown("""
-<div class="carousel-section">
+<div class="carousel-section" style="padding: 0; background: transparent;">
     <div class="carousel-container">
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/SttackSite/site/main/20.png" alt="Template 1">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/SttackSite/site/main/testeimagem1.png" alt="Template 2">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/24.png" alt="Template 3">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/11.png" alt="Template 4">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/22.png" alt="Template 5">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/13.png" alt="Template 6">
-        </a>
-        <a href="https://sttacktemplate1.streamlit.app/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/1.png" alt="Template 7">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/21.png" alt="Template 8">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/26.png" alt="Template 9">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/18.png" alt="Template 10">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/14.png" alt="Template 11">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/16.png" alt="Template 12">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/10.png" alt="Template 13">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/8.png" alt="Template 14">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/15.png" alt="Template 15">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/3.png" alt="Template 16">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/27.png" alt="Template 17">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/2.png" alt="Template 18">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/19.png" alt="Template 19">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/28.png" alt="Template 20">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/23.png" alt="Template 21">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/25.png" alt="Template 22">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/6.png" alt="Template 23">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/12.png" alt="Template 24">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/9.png" alt="Template 25">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/5.png" alt="Template 26">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/7.png" alt="Template 27">
-        </a>
-        <a href="https://www.google.com/" target="_blank" class="carousel-item-link">
-            <img src="https://raw.githubusercontent.com/Gm0ur4/cortex-demo/main/4.png" alt="Template 28">
-        </a>
+        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/20.png" alt="Template 1"></div></a>
+        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/17.png" alt="Template 2"></div></a>
+        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/24.png" alt="Template 3"></div></a>
+        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/11.png" alt="Template 4"></div></a>
+        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/22.png" alt="Template 5"></div></a>
+        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/13.png" alt="Template 6"></div></a>
+        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/1.png" alt="Template 7"></div></a>
+        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/21.png" alt="Template 8"></div></a>
+        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/26.png" alt="Template 9"></div></a>
+        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/18.png" alt="Template 10"></div></a>
+        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/16.png" alt="Template 12"></div></a>
+        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/15.png" alt="Template 15"></div></a>
+        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/3.png" alt="Template 16"></div></a>
+        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/27.png" alt="Template 17"></div></a>
+        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/19.png" alt="Template 19"></div></a>
+        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/23.png" alt="Template 21"></div></a>
+        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/25.png" alt="Template 22"></div></a>
+        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/6.png" alt="Template 23"></div></a>
+        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/12.png" alt="Template 24"></div></a>
+        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/7.png" alt="Template 27"></div></a>
+        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/4.png" alt="Template 28"></div></a>
     </div>
 </div>
 """, unsafe_allow_html=True)
