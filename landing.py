@@ -229,8 +229,8 @@ st.markdown("""
     }
 
     .carousel-item-image-only img {
-        width: 100%;
-        height: 100%;
+        width: auto;
+        height: auto;
         object-fit: cover;
         display: block;
         border-radius: 8px;
