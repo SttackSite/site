@@ -517,6 +517,13 @@ st.markdown("""
         <a href="https://stackteste.streamlit.app/?cliente=template12" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/12.png" alt="Template 12"></div></a>
         <a href="https://stackteste.streamlit.app/?cliente=template7" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/7.png" alt="Template 7"></div></a>
         <a href="https://stackteste.streamlit.app/?cliente=template4" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/4.png" alt="Template 4"></div></a>
+        <a href="https://stackteste.streamlit.app/?cliente=template29" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/29.png" alt="Template 29"></div></a>
+        <a href="https://stackteste.streamlit.app/?cliente=template30" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/30.png" alt="Template 30"></div></a>
+        <a href="https://stackteste.streamlit.app/?cliente=template31" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/31.png" alt="Template 31"></div></a>
+        <a href="https://stackteste.streamlit.app/?cliente=template32" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/32.png" alt="Template 32"></div></a>
+        <a href="https://stackteste.streamlit.app/?cliente=template33" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/33.png" alt="Template 33"></div></a>
+        <a href="https://stackteste.streamlit.app/?cliente=template34" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/34.png" alt="Template 34"></div></a>
+        <a href="https://stackteste.streamlit.app/?cliente=template35" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/35.png" alt="Template 35"></div></a>
     </div>
 </div>
 """, unsafe_allow_html=True)
