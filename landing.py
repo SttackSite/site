@@ -230,7 +230,7 @@ st.markdown("""
 
     .carousel-item-image-only img {
         width: 100%;
-        height: auto;
+        height: 100%;
         object-fit: cover;
         display: block;
         border-radius: 8px;
