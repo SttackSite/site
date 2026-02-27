@@ -497,7 +497,7 @@ st.markdown("""
 <div class="carousel-section" style="padding: 0; background: transparent;">
     <div class="carousel-container">
         <a href="https://stackteste.streamlit.app/?cliente=template20" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/20.png" alt="Template 20"></div></a>
-        <a href="https://stackteste.streamlit.app/?cliente=template17" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/17.png" alt="Template 17></div></a>
+        <a href="https://stackteste.streamlit.app/?cliente=template17" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/17.png" alt="Template 17"></div></a>
         <a href="https://stackteste.streamlit.app/?cliente=template24" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/24.png" alt="Template 24"></div></a>
         <a href="https://stackteste.streamlit.app/?cliente=template11" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/11.png" alt="Template 11"></div></a>
         <a href="https://stackteste.streamlit.app/?cliente=template22" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/22.png" alt="Template 22"></div></a>
