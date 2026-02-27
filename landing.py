@@ -496,27 +496,27 @@ st.markdown('<h2>Clique na imagem e explore por completo os templates ideais par
 st.markdown("""
 <div class="carousel-section" style="padding: 0; background: transparent;">
     <div class="carousel-container">
-        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/20.png" alt="Template 1"></div></a>
-        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/17.png" alt="Template 2"></div></a>
-        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/24.png" alt="Template 3"></div></a>
-        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/11.png" alt="Template 4"></div></a>
-        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/22.png" alt="Template 5"></div></a>
-        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/13.png" alt="Template 6"></div></a>
-        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/1.png" alt="Template 7"></div></a>
-        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/21.png" alt="Template 8"></div></a>
-        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/26.png" alt="Template 9"></div></a>
-        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/18.png" alt="Template 10"></div></a>
-        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/16.png" alt="Template 12"></div></a>
-        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/15.png" alt="Template 15"></div></a>
-        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/3.png" alt="Template 16"></div></a>
-        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/27.png" alt="Template 17"></div></a>
-        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/19.png" alt="Template 19"></div></a>
-        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/23.png" alt="Template 21"></div></a>
-        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/25.png" alt="Template 22"></div></a>
-        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/6.png" alt="Template 23"></div></a>
-        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/12.png" alt="Template 24"></div></a>
-        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/7.png" alt="Template 27"></div></a>
-        <a href="#precos" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/4.png" alt="Template 28"></div></a>
+        <a href="https://stackteste.streamlit.app/?cliente=template20" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/20.png" alt="Template 20"></div></a>
+        <a href="https://stackteste.streamlit.app/?cliente=template17" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/17.png" alt="Template 17></div></a>
+        <a href="https://stackteste.streamlit.app/?cliente=template24" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/24.png" alt="Template 24"></div></a>
+        <a href="https://seulink.com" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/11.png" alt="Template 4"></div></a>
+        <a href="https://seulink.com" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/22.png" alt="Template 5"></div></a>
+        <a href="https://seulink.com" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/13.png" alt="Template 6"></div></a>
+        <a href="https://seulink.com" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/1.png" alt="Template 7"></div></a>
+        <a href="https://seulink.com" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/21.png" alt="Template 8"></div></a>
+        <a href="https://seulink.com" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/26.png" alt="Template 9"></div></a>
+        <a href="https://seulink.com" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/18.png" alt="Template 10"></div></a>
+        <a href="https://seulink.com" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/16.png" alt="Template 12"></div></a>
+        <a href="https://seulink.com" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/15.png" alt="Template 15"></div></a>
+        <a href="https://seulink.com" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/3.png" alt="Template 16"></div></a>
+        <a href="https://seulink.com" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/27.png" alt="Template 17"></div></a>
+        <a href="https://seulink.com" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/19.png" alt="Template 19"></div></a>
+        <a href="https://seulink.com" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/23.png" alt="Template 21"></div></a>
+        <a href="https://seulink.com" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/25.png" alt="Template 22"></div></a>
+        <a href="https://seulink.com" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/6.png" alt="Template 23"></div></a>
+        <a href="https://seulink.com" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/12.png" alt="Template 24"></div></a>
+        <a href="https://seulink.com" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/7.png" alt="Template 27"></div></a>
+        <a href="https://seulink.com" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/4.png" alt="Template 28"></div></a>
     </div>
 </div>
 """, unsafe_allow_html=True)
