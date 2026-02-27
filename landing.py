@@ -472,7 +472,7 @@ st.markdown('<h2>PROCESSO <span class="serif-heavy">sem falhas.</span></h2><br><
 
 steps = [
     ("SELECIONE O MODELO IDEAL", "Escolha entre mais de 30 modelos validados o que mais combina com a identidade do seu negócio."),
-    ("CUSTOMIZAÇÃO RÁPIDA", "Utilize nosso ambiente exclusivo de edição fácil para personalizar tudo o que precisar sem complicações."),
+    ("CUSTOMIZAÇÃO RÁPIDA", "Utilize nosso ambiente exclusivo de edição para personalizar tudo o que precisar sem complicações."),
     ("SETUP TÉCNICO GRATUITO", "Hospedamos seu site em minutos, como as melhores técnicas de SEO, com seu domínio Streamlit sem custo adicional e de forma rápida."),
     ("LANÇAMENTO IMEDIATO", "Site no ar, otimizado e pronto para escalar seu negócio com uma estrutura de alta performance.")
 ]
