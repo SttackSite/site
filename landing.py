@@ -167,7 +167,7 @@ st.markdown("""
         scroll-behavior: smooth;
         scrollbar-width: thin;
         scrollbar-color: var(--gold) transparent;
-        height: 900px;
+        height: auto;
     }
 
     .carousel-container::-webkit-scrollbar {
