@@ -492,7 +492,7 @@ st.markdown('</div>', unsafe_allow_html=True)
 
 # --- 3 & 4. SHOWCASE DE TEMPLATES (GRID 2D COM SCROLL) ---
 st.markdown('<div id="templates" style="padding: 120px 8%;">', unsafe_allow_html=True)
-st.markdown('<h2>Clique na imagem e explore por completo os templates ideais para <span class="serif-heavy"> seu negócio:</span></h2><br><br>', unsafe_allow_html=True)
+st.markdown('<h2>Clique e explore por completo os templates ideais para <span class="serif-heavy"> seu negócio:</span></h2><br><br>', unsafe_allow_html=True)
 st.markdown("""
 <div class="carousel-section" style="padding: 0; background: transparent;">
     <div class="carousel-container">
