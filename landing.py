@@ -547,35 +547,38 @@ with p2: # Featured
     st.markdown("""
     <div class="pricing-glass" style="border-top: 5px solid var(--accent);">
         <p style="color: var(--gold); letter-spacing: 3px; font-weight: 900;">PROFESSIONAL</p>
-        <h1 style="font-size: 80px; margin: 30px 0;">R$ 197</h1>
-        <p>✓ Acesso vitalício aos templates atuais</p>
-        <p>✓ 02 consultorias mensais para customização</p>
+        <h1 style="font-size: 80px; margin: 30px 0;">R$ 48</h1>
+        <p>✓ Estrutura profissional pensada para gerar clientes</p>
+        <p>✓ Integração com WhatsApp via botão direto no site</p>
+        <p>✓ Site publicado rapidamente após a personalização</p>
+        <p>✓ Edite seu site quando quiser e o que quiser com um painel simples</p>
+        <p>✓ Site rápido e otimizado para performance</p>
+        <p>✓ Domínio e hospedagem Streamlit inclusos</p>
         <p>✓ Pagamento mensal</p>
-        <p>✓ Integração do seu site ao seu WhatsApp</p>
-        <p>✓ Manual completo de customização e setup</p>
-        <p>✓ Suporte técnico ágil via e-mail</p>
-        <p>✓ Acesso imediato</p>
+        <p>✓ Acesso vitalício aos templates</p>
         <p>✓ Atualizações de novos templates inclusas</p>
+        <p>✓ Suporte técnico ágil</p>
     </div>
     """, unsafe_allow_html=True)
-    st.button("QUERO O ELITE BUNDLE", key="main_p")
+    st.button("CRIAR MEU SITE AGORA", key="main_p")
 
 with p3:
     st.markdown("""
     <div class="pricing-glass">
         <p>BUSINESS</p>
         <h1 style="font-size: 60px; margin: 30px 0;">R$ 297</h1>
-        <p>✓ Acesso vitalício aos templates atuais</p>
+        <p>✓ Licença comercial para vender com sua própria marca (white label)</p>
+        <p>✓ Estruturas prontas para entrega rápida ao cliente</p>
+        <p>✓ Painel de edição simplificado para seus clientes</p>
+        <p>✓ Atualizações contínuas de novos templates</p>
         <p>✓ Pagamento mensal</p>
-        <p>✓ Licença comercial para revenda ilimitada</p>
-        <p>✓ Selo de parceiro desenvolvedor</p>
-        <p>✓ Manual completo de customização e setup</p>
-        <p>✓ Suporte técnico ágil via e-mail</p>
+        <p>✓ Modelo validado para gerar renda com sites</p>
         <p>✓ Acesso imediato</p>
-        <p>✓ Atualizações de novos templates inclusas</p>
+        <p>✓ Suporte específico para parceiros</p>
+        <p>✓ Selo de parceiro desenvolvedor</p>
     </div>
     """, unsafe_allow_html=True)
-    st.button("SER VITALÍCIO", key="p3")
+    st.button("LIBERAR ACESSO DE REVENDA", key="p3")
 st.markdown('</div>', unsafe_allow_html=True)
 
 # --- 9. FAQ ---
