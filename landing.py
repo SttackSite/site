@@ -547,7 +547,7 @@ with p2: # Featured
     st.markdown("""
     <div class="pricing-glass" style="border-top: 5px solid var(--accent);">
         <p style="color: var(--gold); letter-spacing: 3px; font-weight: 900;">PROFESSIONAL</p>
-        <h1 style="font-size: 80px; margin: 30px 0;">R$ 48</h1>
+        <h1 style="font-size: 80px; margin: 30px 0;">R$ 49</h1>
         <p>✓ Estrutura profissional pensada para gerar clientes</p>
         <p>✓ Integração com WhatsApp via botão direto no site</p>
         <p>✓ Site publicado rapidamente após a personalização</p>
@@ -566,7 +566,7 @@ with p3:
     st.markdown("""
     <div class="pricing-glass">
         <p>BUSINESS</p>
-        <h1 style="font-size: 60px; margin: 30px 0;">R$ 297</h1>
+        <h1 style="font-size: 60px; margin: 30px 0;">R$ 197</h1>
         <p>✓ Licença comercial para vender com sua própria marca (white label)</p>
         <p>✓ Estruturas prontas para entrega rápida ao cliente</p>
         <p>✓ Painel de edição simplificado para seus clientes</p>
