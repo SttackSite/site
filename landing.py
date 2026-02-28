@@ -541,7 +541,7 @@ st.markdown("""
 st.markdown('<div id="precos" style="padding: 120px 8%; text-align:center;">', unsafe_allow_html=True)
 st.markdown('<h2>INVISTA NA SUA <span class="serif-heavy">Presença.</span></h2><br><br>', unsafe_allow_html=True)
 
-p1, p2, p3 = st.columns(3)
+p2, p3 = st.columns(2)
 
 with p2: # Featured
     st.markdown("""
@@ -559,21 +559,6 @@ with p2: # Featured
     </div>
     """, unsafe_allow_html=True)
     st.button("QUERO O ELITE BUNDLE", key="main_p")
-
-with p1:
-    st.markdown("""
-    <div class="pricing-glass">
-        <p>STARTER</p>
-        <h1 style="font-size: 60px; margin: 30px 0;">R$ 67</h1>
-        <p>✓ Acesso vitalício aos templates atuais</p>
-        <p>✓ Pagamento único</p>
-        <p>✓ Manual completo de customização e setup</p>
-        <p>✓ Suporte técnico ágil via e-mail</p>
-        <p>✓ Acesso imediato</p>
-        <p>✓ Atualizações de novos templates inclusas</p>
-    </div>
-    """, unsafe_allow_html=True)
-    st.button("INICIAR", key="p1")
 
 with p3:
     st.markdown("""
