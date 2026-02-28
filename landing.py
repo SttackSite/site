@@ -586,26 +586,16 @@ st.markdown('<div id="faq" style="padding: 100px 20%; background: #080808;">', u
 st.markdown('<h2 style="text-align:center; font-size: 40px;">FAQ / <span class="serif-heavy">Respostas.</span></h2><br>', unsafe_allow_html=True)
 
 faq = {
-    "Preciso saber programação para usar os templates?": "Não é preciso. O código é entregue pronto e você segue o nosso guia detalhado para personalizar os textos, cores, imagens e o que precisar.",
-    "É seguro realizar a compra?": "Sim! Toda a compra é processada pela Eduzz, uma das plataformas de pagamentos e educação mais seguras e reconhecidas do Brasil. Nenhum dado sensível passa por nós, tudo ocorre diretamente no ambiente da Eduzz, com criptografia, certificados de segurança e antifraude.",
-    "⚠️ POLÍTICA DE REEMBOLSO (LEIA COM ATENÇÃO)": """<strong style='color: var(--gold); font-size: 16px;'>Prazo Legal – 7 dias:</strong> Nos termos do Art. 49 do Código de Defesa do Consumidor, você pode solicitar reembolso em até 7 dias corridos após a compra realizada online. Respeitamos integralmente esse direito.<br><br>
-
-<strong style='color: var(--gold); font-size: 16px;'>Proteção Legal do Produto:</strong> Nossos templates são produtos digitais protegidos pela Lei 9.610/98 (Lei de Direitos Autorais). O código-fonte possui rastreio ofuscado e constitui obra intelectual protegida por lei.<br><br>
-
-<strong style='color: var(--gold); font-size: 16px;'>Condição para Reembolso:</strong> A solicitação de reembolso implica na interrupção imediata do uso do material adquirido, incluindo:<br>
-- Remoção do código de qualquer repositório<br>
-- Remoção do deploy em qualquer servidor na internet (site)<br>
-- Interrupção total da utilização comercial ou pessoal<br><br>
-
-<strong style='color: var(--gold); font-size: 16px;'>Uso Indevido Após Reembolso:</strong> A permanência do uso do código após o reembolso configura violação de direito autoral (Art. 184 do Código Penal), uso indevido de propriedade intelectual e possível enriquecimento ilícito.<br><br>
-
-Reservamo-nos o direito de registrar evidências técnicas de utilização indevida.<br><br>
-
-Clientes legítimos são sempre respeitados. Todos os casos de má-fé até aqui foram tratados conforme a legislação vigente.<br><br>""",
-    "Existe algum tipo de suporte?": "Com certeza. Todos os planos incluem suporte humano ágil via e-mail e com o plano professional você tem direito a 2 consultorias mensais para customização.",
-    "Por onde acesso os templates?": "O acesso é 100% digital e imediato. Após a confirmação do pagamento, você receberá um e-mail da Eduzz com seus dados de acesso à área de membros. Lá, você encontrará os arquivos de todos os templates, além dos guias de setup e explicações organizados por módulos.",
-    "A hospedagem é mesmo gratuita?": "Sim. Nosso método utiliza infraestruturas globais de alta performance que permitem manter sites profissionais online sem mensalidades de hospedagem. No passo a passo, ensinamos como configurar essa estrutura gratuita de forma segura, garantindo que você tenha um site rápido e estável sem custos fixos recorrentes.",
+    "Preciso saber programação ou design para criar meu site?": "Não. Você não precisa saber programação nem design. Criamos um editor visual simples e intuitivo onde você pode alterar textos, informações e imagens em poucos cliques, sem nenhuma parte técnica. O template já vem com estrutura profissional pronta, basta personalizar e publicar.",
+    "Posso editar o site depois de publicado?": "Sim. Você pode editar seu site sempre que quiser, mesmo depois de publicado. Todas as alterações são feitas pelo painel de edição, de forma rápida e simples — sem precisar tirar o site do ar. Basta atualizar textos, imagens ou informações e as mudanças já ficam disponíveis automaticamente.",
+    "Posso usar meu próprio domínio?": "Sim. Seu site é publicado com um domínio profissional utilizando a infraestrutura da Streamlit, no formato: https://nomedoseusite.streamlit.app Esse modelo permite colocar seu site no ar de forma rápida, segura e sem custos adicionais de hospedagem. Caso queira, você também pode futuramente conectar um domínio próprio (ex.: seusite.com), mas isso é opcional, o site já funciona normalmente com o domínio incluído.",
+    "A hospedagem é mesmo gratuita?": "Sim. Nosso método utiliza infraestruturas globais de alta performance que permitem manter sites profissionais online sem mensalidades de hospedagem.",
     "Posso vender os sites para clientes?": "Com o plano Business, você tem licença comercial completa para lucrar com nossos designs."
+    "O site funciona no celular?": "Sim. Todos os templates são 100% responsivos, ou seja, funcionam perfeitamente em celulares, tablets e computadores. O layout se adapta automaticamente ao tamanho da tela, garantindo que seu site fique organizado, rápido e profissional em qualquer dispositivo.",
+    "É seguro realizar a compra?": "Sim! Toda a compra é processada pela Eduzz, uma das plataformas de pagamentos e educação mais seguras e reconhecidas do Brasil. Nenhum dado sensível passa por nós, tudo ocorre diretamente no ambiente da Eduzz, com criptografia, certificados de segurança e antifraude.",
+    "Como recebo acesso após a compra?": "O acesso é 100% digital e imediato. Após a confirmação do pagamento, você receberá um e-mail da Eduzz com seus dados de acesso à área de membros. Lá, você encontrará os arquivos de todos os templates, além dos guias de customização e explicações organizados por módulos.",
+    "Existe algum tipo de suporte?": "Sim. Oferecemos suporte técnico ágil via e-mail para ajudar você em todas as etapas — desde a personalização até a publicação do site. Sempre que precisar, nossa equipe estará disponível para orientar de forma rápida e prática.",
+    "Política de reembolso": "Você tem 7 dias para testar o produto com total segurança. Caso não fique satisfeito por qualquer motivo, basta solicitar o reembolso dentro desse prazo e devolveremos 100% do valor pago, sem burocracia. Acreditamos na qualidade dos nossos templates e queremos que você tenha tempo suficiente para explorar o material, testar o painel de edição e verificar se faz sentido para o seu projeto."
 }
 
 for i, (q, a) in enumerate(faq.items()):
