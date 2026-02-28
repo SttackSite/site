@@ -567,7 +567,7 @@ with p3:
     <div class="pricing-glass">
         <p>BUSINESS</p>
         <h1 style="font-size: 60px; margin: 30px 0;">R$ 197</h1>
-        <p>✓ Licença comercial para vender com sua própria marca (white label)</p>
+        <p>✓ Licença comercial para vender nossos templates</p>
         <p>✓ Estruturas prontas para entrega rápida ao cliente</p>
         <p>✓ Painel de edição simplificado para seus clientes</p>
         <p>✓ Atualizações contínuas de novos templates</p>
