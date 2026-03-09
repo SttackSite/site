@@ -496,9 +496,9 @@ st.markdown('<h2>Clique e explore por completo os templates ideais para <span cl
 st.markdown("""
 <div class="carousel-section" style="padding: 0; background: transparent;">
     <div class="carousel-container">
-        <a href="https://stackteste.streamlit.app/?cliente=template26" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/26.png" alt="Template 26"></div></a>
         <a href="https://stackteste.streamlit.app/?cliente=template13" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/13.png" alt="Template 13"></div></a>
         <a href="https://stackteste.streamlit.app/?cliente=template27" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/27.png" alt="Template 27"></div></a>
+        <a href="https://stackteste.streamlit.app/?cliente=template26" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/26.png" alt="Template 26"></div></a>
         <a href="https://stackteste.streamlit.app/?cliente=template17" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/17.png" alt="Template 17"></div></a>
         <a href="https://stackteste.streamlit.app/?cliente=template5" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/5.png" alt="Template 5"></div></a>
         <a href="https://stackteste.streamlit.app/?cliente=template1" target="_blank" style="text-decoration: none;"><div class="carousel-item-image-only"><img src="https://raw.githubusercontent.com/SttackSite/site/main/1.png" alt="Template 1"></div></a>
