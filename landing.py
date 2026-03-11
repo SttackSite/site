@@ -684,9 +684,8 @@ st.markdown('<div class="duvida-section">', unsafe_allow_html=True)
 st.markdown("""
 <div class="duvida-titulo">
     Se você tem uma necessidade ou dúvida específica que não encontrou no FAQ,
-    <span>pergunte agora</span>
+    <span>pergunte agora e receba uma resposta ágil e humana</span>
 </div>
-<div class="duvida-subtitulo">e receba uma resposta ágil e humana</div>
 """, unsafe_allow_html=True)
 
 st.markdown('<div class="duvida-wrap">', unsafe_allow_html=True)
