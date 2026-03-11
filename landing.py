@@ -550,11 +550,7 @@ with p2: # Featured
     st.markdown("""
     <div class="pricing-glass" style="border-top: 5px solid var(--accent);">
         <p style="color: var(--gold); letter-spacing: 3px; font-weight: 900;">PROFESSIONAL</p>
-        <div style="margin: 30px 0;">
-            <h1 style="font-size: 80px; margin-bottom: 0;">R$ 9,90</h1>
-            <p style="color: var(--gold); font-weight: 900; letter-spacing: 1px; margin-top: 5px; text-transform: uppercase;">NO PRIMEIRO MÊS</p>
-            <p style="font-size: 14px; opacity: 0.6; margin-top: -5px;">Renovação automática por R$ 39,90/mês.</p>
-        </div>
+        <h1 style="font-size: 80px; margin: 30px 0;">R$ 49</h1>
         <p>✓ Estrutura profissional pensada para gerar clientes</p>
         <p>✓ Integração com WhatsApp via botão direto no site</p>
         <p>✓ Site publicado rapidamente após a personalização</p>
@@ -567,11 +563,7 @@ with p2: # Featured
         <p>✓ Suporte técnico ágil</p>
     </div>
     """, unsafe_allow_html=True)
-    
-    # Link e botão corrigidos (Garanta que apagou o st.link_button antigo que estava aqui)
-    st.markdown('<a href="https://pay.kiwify.com.br/qE6dljc" target="_blank" style="text-decoration: none;">', unsafe_allow_html=True)
-    st.button("CRIAR MEU SITE AGORA", key="main_professional_link")
-    st.markdown('</a>', unsafe_allow_html=True)
+    st.link_button("CRIAR MEU SITE AGORA", "https://pay.kiwify.com.br/qE6dljc")
 
 with p3:
     st.markdown("""
