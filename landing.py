@@ -293,22 +293,25 @@ st.markdown("""
     }
 
     /* Botão de Alta Conversão */
-    div.stButton > button {
-        background: linear-gradient(90deg, #7b2cbf, #9d4edd);
-        color: white;
-        border: none;
-        padding: 25px 60px;
-        font-weight: 900;
-        font-size: 22px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        border-radius: 0;
-        clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
-        transition: 0.4s;
+    div.stButton > button,
+    div.stLinkButton > a {
+        background: linear-gradient(90deg, #7b2cbf, #9d4edd) !important;
+        color: white !important;
+        border: none !important;
+        padding: 25px 60px !important;
+        font-weight: 900 !important;
+        font-size: 22px !important;
+        text-transform: uppercase !important;
+        letter-spacing: 2px !important;
+        border-radius: 0 !important;
+        clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%) !important;
+        transition: 0.4s !important;
+        text-decoration: none !important;
     }
-    div.stButton > button:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 30px rgba(123, 44, 191, 0.5);
+    div.stButton > button:hover,
+    div.stLinkButton > a:hover {
+        transform: scale(1.05) !important;
+        box-shadow: 0 0 30px rgba(123, 44, 191, 0.5) !important;
     }
 
     /* ❌ NÃO ALTERE: FAQ Destacado - Política de Reembolso */
@@ -560,7 +563,7 @@ with p2: # Featured
         <p>✓ Suporte técnico ágil</p>
     </div>
     """, unsafe_allow_html=True)
-    st.button("CRIAR MEU SITE AGORA", key="main_p")
+    st.link_button("CRIAR MEU SITE AGORA", "https://pay.kiwify.com.br/qE6dljc")
 
 with p3:
     st.markdown("""
