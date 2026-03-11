@@ -559,12 +559,8 @@ with p2: # Featured
         <p>✓ Atualizações de novos templates inclusas</p>
         <p>✓ Suporte técnico ágil</p>
     </div>
-        <a href="https://pay.kiwify.com.br/qE6dljc" target="_blank" style="text-decoration: none;">
-        <div style="background: linear-gradient(90deg, #7b2cbf, #9d4edd); color: white; border: none; padding: 25px 60px; font-weight: 900; font-size: 22px; text-transform: uppercase; letter-spacing: 2px; border-radius: 0; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%); transition: 0.4s; text-align: center; margin-top: -30px; cursor: pointer;">
-            CRIAR MEU SITE AGORA
-        </div>
-    </a>
     """, unsafe_allow_html=True)
+    st.button("CRIAR MEU SITE AGORA", key="main_p")
 
 with p3:
     st.markdown("""
