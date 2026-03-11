@@ -543,16 +543,11 @@ st.markdown('<h2>INVISTA NA SUA <span class="serif-heavy">Presença.</span></h2>
 
 p2, p3 = st.columns(2)
 
-with p2: # Featured - PROFESSIONAL
+with p2: # Featured
     st.markdown("""
     <div class="pricing-glass" style="border-top: 5px solid var(--accent);">
         <p style="color: var(--gold); letter-spacing: 3px; font-weight: 900;">PROFESSIONAL</p>
-        <div style="margin: 30px 0;">
-            <span style="font-size: 20px; vertical-align: super; color: rgba(255,255,255,0.6);">R$</span>
-            <span style="font-size: 80px; font-weight: 900;">9,90</span>
-            <p style="font-size: 14px; color: var(--gold); margin-top: -15px; font-weight: 700; text-transform: uppercase;">no primeiro mês</p>
-            <p style="font-size: 16px; opacity: 0.7; font-weight: 400;">Depois, apenas R$ 39,90/mês</p>
-        </div>
+        <h1 style="font-size: 80px; margin: 30px 0;">R$ 49</h1>
         <p>✓ Estrutura profissional pensada para gerar clientes</p>
         <p>✓ Integração com WhatsApp via botão direto no site</p>
         <p>✓ Site publicado rapidamente após a personalização</p>
@@ -564,39 +559,10 @@ with p2: # Featured - PROFESSIONAL
         <p>✓ Atualizações de novos templates inclusas</p>
         <p>✓ Suporte técnico ágil</p>
     </div>
-    
-    <!-- BOTÃO ESTILIZADO IGUAL AO ANTERIOR -->
-    <style>
-        .btn-kiwify {
-            display: inline-block;
-            width: 100%;
-            background: linear-gradient(90deg, #7b2cbf, #9d4edd);
-            color: white !important;
-            text-decoration: none !important;
-            padding: 25px 0;
-            font-weight: 900;
-            font-size: 22px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
-            transition: 0.4s ease;
-            margin-top: 20px;
-            text-align: center;
-            border: none;
-        }
-        .btn-kiwify:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(123, 44, 191, 0.5);
-            color: white !important;
-        }
-    </style>
-    
-    <a href="https://pay.kiwify.com.br/qE6dljc" target="_blank" class="btn-kiwify">
-        CRIAR MEU SITE AGORA
-    </a>
     """, unsafe_allow_html=True)
+    st.button("CRIAR MEU SITE AGORA", key="main_p")
 
-with p3: # BUSINESS
+with p3:
     st.markdown("""
     <div class="pricing-glass">
         <p>BUSINESS</p>
