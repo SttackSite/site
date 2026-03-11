@@ -567,13 +567,10 @@ with p2: # Featured
         <p>✓ Suporte técnico ágil</p>
     </div>
     """, unsafe_allow_html=True)
-    st.markdown('<a href="https://pay.kiwify.com.br/qE6dljc" target="_blank" style="text-decoration: none;">', unsafe_allow_html=True)
-    st.button("CRIAR MEU SITE AGORA", key="main_p")
-    st.markdown('</a>', unsafe_allow_html=True)
     
-    # Mantendo o link e o botão original conforme sua necessidade anterior
+    # Link e botão corrigidos (Garanta que apagou o st.link_button antigo que estava aqui)
     st.markdown('<a href="https://pay.kiwify.com.br/qE6dljc" target="_blank" style="text-decoration: none;">', unsafe_allow_html=True)
-    st.button("CRIAR MEU SITE AGORA", key="main_p")
+    st.button("CRIAR MEU SITE AGORA", key="main_professional_link")
     st.markdown('</a>', unsafe_allow_html=True)
 
 with p3:
