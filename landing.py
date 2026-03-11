@@ -611,6 +611,134 @@ for i, (q, a) in enumerate(faq.items()):
             st.markdown(f"<p style='color: #ccc;'>{a}</p>", unsafe_allow_html=True)
 st.markdown('</div>', unsafe_allow_html=True)
 
+# --- 10. SEÇÃO DE DÚVIDAS ---
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+
+GMAIL_USER    = st.secrets.get("GMAIL_USER", "")
+GMAIL_PASS    = st.secrets.get("GMAIL_PASS", "")
+DESTINO_EMAIL = "sttacksite@gmail.com"
+
+st.markdown("""
+<style>
+    .duvida-section {
+        padding: 100px 20%;
+        background: #050505;
+        border-top: 1px solid rgba(255,255,255,0.07);
+    }
+    .duvida-titulo {
+        font-family: 'Inter', sans-serif;
+        font-weight: 900;
+        font-size: clamp(22px, 3vw, 36px);
+        text-transform: uppercase;
+        letter-spacing: -1px;
+        line-height: 1.15;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+    .duvida-titulo span {
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        font-weight: 900;
+        color: var(--gold);
+        text-transform: none;
+        letter-spacing: -1px;
+    }
+    .duvida-subtitulo {
+        font-family: 'Inter', sans-serif;
+        font-size: 15px;
+        color: rgba(255,255,255,0.45);
+        text-align: center;
+        margin-bottom: 48px;
+        letter-spacing: 0.5px;
+    }
+    /* Inputs dentro da seção de dúvidas */
+    .duvida-wrap .stTextInput input,
+    .duvida-wrap .stTextArea textarea {
+        background: rgba(255,255,255,0.04) !important;
+        border: 1px solid rgba(255,255,255,0.12) !important;
+        border-radius: 0 !important;
+        color: #ffffff !important;
+        font-family: 'Inter', sans-serif !important;
+        font-size: 14px !important;
+    }
+    .duvida-wrap .stTextInput input:focus,
+    .duvida-wrap .stTextArea textarea:focus {
+        border-color: #7b2cbf !important;
+        box-shadow: 0 0 0 1px #7b2cbf !important;
+    }
+    .duvida-wrap label p {
+        color: rgba(255,255,255,0.5) !important;
+        font-family: 'Inter', sans-serif !important;
+        font-size: 11px !important;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
+    }
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown('<div class="duvida-section">', unsafe_allow_html=True)
+st.markdown("""
+<div class="duvida-titulo">
+    Se você tem uma necessidade ou dúvida específica que não encontrou no FAQ,
+    <span>pergunte agora</span>
+</div>
+<div class="duvida-subtitulo">e receba uma resposta ágil e humana</div>
+""", unsafe_allow_html=True)
+
+st.markdown('<div class="duvida-wrap">', unsafe_allow_html=True)
+
+col_d1, col_d2 = st.columns(2)
+with col_d1:
+    duvida_nome  = st.text_input("Seu nome", placeholder="Ex: João Silva", key="duvida_nome")
+with col_d2:
+    duvida_email = st.text_input("Seu e-mail", placeholder="Ex: joao@email.com", key="duvida_email")
+
+duvida_msg = st.text_area(
+    "Sua dúvida ou projeto",
+    placeholder="Descreva aqui o seu projeto ou sua dúvida...",
+    height=160,
+    key="duvida_msg"
+)
+
+enviar_duvida = st.button("ESCLARECER MINHA DÚVIDA", key="duvida_send")
+
+if enviar_duvida:
+    if not duvida_nome.strip() or not duvida_email.strip() or "@" not in duvida_email or not duvida_msg.strip():
+        st.warning("⚠️ Preencha todos os campos: nome, e-mail e sua dúvida.")
+    else:
+        try:
+            subject   = f"[Dúvida no Site] {duvida_nome}"
+            body_html = f"""
+            <div style="font-family:Inter,sans-serif;font-size:14px;color:#1a1a1a;line-height:1.7">
+                <h2 style="color:#7b2cbf">Nova dúvida recebida pelo site</h2>
+                <p><strong>Nome:</strong> {duvida_nome}</p>
+                <p><strong>E-mail:</strong> {duvida_email}</p>
+                <hr style="border:none;border-top:1px solid #eee;margin:16px 0">
+                <p><strong>Mensagem:</strong></p>
+                <p style="background:#f4f6fb;padding:16px;border-radius:8px">{duvida_msg.replace(chr(10), "<br>")}</p>
+            </div>
+            """
+            msg = MIMEMultipart("alternative")
+            msg["Subject"] = subject
+            msg["From"]    = GMAIL_USER
+            msg["To"]      = DESTINO_EMAIL
+            msg.attach(MIMEText(body_html, "html", "utf-8"))
+
+            with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=15) as server:
+                server.login(GMAIL_USER, GMAIL_PASS)
+                server.sendmail(GMAIL_USER, DESTINO_EMAIL, msg.as_string())
+
+            st.success("✅ Dúvida enviada! Nossa equipe responderá em breve no seu e-mail.")
+        except Exception as ex:
+            st.error(f"Erro ao enviar: {ex}")
+
+st.markdown('</div>', unsafe_allow_html=True)
+st.markdown('</div>', unsafe_allow_html=True)
+
 # --- FOOTER ---
 st.markdown("""
 <div style="padding: 60px 8%; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 10px; opacity: 0.4; letter-spacing: 5px;">
