@@ -1,8 +1,4 @@
 import streamlit as st
-import json
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
 
 # --- CONFIGURAÇÃO DA PÁGINA ---
 st.set_page_config(
@@ -11,42 +7,13 @@ st.set_page_config(
     layout="wide"
 )
 
-GMAIL_USER    = st.secrets.get("GMAIL_USER", "")
-GMAIL_PASS    = st.secrets.get("GMAIL_PASS", "")
-DESTINO_EMAIL = "sttacksite@gmail.com"
-
-def _enviar_duvida(nome: str, email: str, mensagem: str):
-    try:
-        body_html = f"""
-        <div style="font-family:Inter,sans-serif;max-width:600px;padding:30px;background:#0a0a0a;color:#fff;border-radius:8px;">
-            <h2 style="color:#d4af37;letter-spacing:2px;text-transform:uppercase;">Nova Dúvida — Sttack Site</h2>
-            <hr style="border-color:rgba(255,255,255,0.1);margin:20px 0;">
-            <p><strong style="color:#d4af37;">Nome:</strong> {nome}</p>
-            <p><strong style="color:#d4af37;">E-mail:</strong> {email}</p>
-            <p><strong style="color:#d4af37;">Mensagem:</strong></p>
-            <p style="background:rgba(255,255,255,0.05);padding:16px;border-left:4px solid #7b2cbf;border-radius:4px;">{mensagem}</p>
-        </div>
-        """
-        msg = MIMEMultipart("alternative")
-        msg["Subject"] = f"[Nova Dúvida] Sttack Site — {nome}"
-        msg["From"]    = GMAIL_USER
-        msg["To"]      = DESTINO_EMAIL
-        msg["Reply-To"] = email
-        msg.attach(MIMEText(body_html, "html", "utf-8"))
-        with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=15) as server:
-            server.login(GMAIL_USER, GMAIL_PASS)
-            server.sendmail(GMAIL_USER, DESTINO_EMAIL, msg.as_string())
-        return True, ""
-    except Exception as ex:
-        return False, str(ex)
-
 # --- CSS RADICAL (PLUNDER + DOCKYARD + QUDRIX) ---
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Inter:wght@400;700;900&family=Oswald:wght@700&display=swap');
 
     :root {
-        --accent: #7b2cbf;
+        --accent: #7b2cbf; /* Roxo Profundo */
         --gold: #d4af37;
         --dark: #050505;
         --glass: rgba(255, 255, 255, 0.03);
@@ -60,6 +27,7 @@ st.markdown("""
     [data-testid="stHeader"] { display: none; }
     .block-container { padding: 0 !important; max-width: 100% !important; }
 
+    /* Tipografia de Impacto Brutalista */
     h1, h2 {
         font-family: 'Inter', sans-serif;
         font-weight: 900;
@@ -75,6 +43,7 @@ st.markdown("""
         letter-spacing: -1px;
     }
 
+    /* ❌ NÃO ALTERE: NAVBAR ESTILO YOLU ADAPTADO PARA SITE STTACK */
     .navbar-elite {
         display: flex;
         justify-content: space-between;
@@ -87,6 +56,7 @@ st.markdown("""
         box-sizing: border-box;
     }
     
+    /* ❌ NÃO ALTERE: Logo da navbar */
     .logo-elite {
         font-size: 22px;
         font-weight: 900;
@@ -96,12 +66,14 @@ st.markdown("""
         text-transform: uppercase;
     }
 
+    /* ❌ NÃO ALTERE: Container de links de navegação */
     .nav-links-container {
         display: flex;
         gap: 45px;
         align-items: center;
     }
 
+    /* ❌ NÃO ALTERE: Links de navegação */
     .nav-link-elite {
         color: #ffffff !important;
         text-decoration: none !important;
@@ -114,6 +86,7 @@ st.markdown("""
         text-transform: uppercase;
     }
 
+    /* ❌ NÃO ALTERE: Efeito hover nos links */
     .nav-link-elite:hover {
         color: var(--gold) !important;
         text-decoration: none !important;
@@ -124,6 +97,7 @@ st.markdown("""
         text-decoration: none !important;
     }
 
+    /* 1 & 2. HERO RADICAL */
     .hero-section {
         height: 100vh;
         display: flex;
@@ -144,6 +118,7 @@ st.markdown("""
         padding-left: 20px;
     }
 
+    /* 3 & 4. TEMPLATES SHOWCASE (ASSIMÉTRICO) */
     .template-box {
         position: relative;
         overflow: hidden;
@@ -165,6 +140,7 @@ st.markdown("""
         font-size: 30px;
     }
 
+    /* GRID 2D COM SCROLL HORIZONTAL E VERTICAL */
     .carousel-section {
         padding: 120px 8%;
         background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 100%);
@@ -181,6 +157,7 @@ st.markdown("""
         letter-spacing: -2px;
     }
 
+    /* ❌ NÃO ALTERE: Container principal com scroll 2D */
     .carousel-container {
         display: flex;
         gap: 20px;
@@ -193,17 +170,32 @@ st.markdown("""
         height: auto;
     }
 
-    .carousel-container::-webkit-scrollbar { height: 8px; }
-    .carousel-container::-webkit-scrollbar-track { background: transparent; }
-    .carousel-container::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 4px; }
+    .carousel-container::-webkit-scrollbar {
+        height: 8px;
+    }
 
-    .carousel-item-link { display: none; }
+    .carousel-container::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .carousel-container::-webkit-scrollbar-thumb {
+        background: var(--gold);
+        border-radius: 4px;
+    }
+
+    /* ❌ NÃO ALTERE: Link do item do carrossel */
+    .carousel-item-link {
+        display: none;
+    }
+
+    /* ❌ NÃO ALTERE: Efeito hover no link do carrossel */
     .carousel-item-link:hover {
         border-color: var(--gold);
         transform: translateY(-15px);
         box-shadow: 0 30px 80px rgba(212, 175, 55, 0.3);
     }
 
+    /* ❌ NÃO ALTERE: Container de cada template com scroll vertical */
     .carousel-item-image-only {
         flex: 0 0 800px;
         min-width: 800px;
@@ -222,9 +214,19 @@ st.markdown("""
         box-shadow: 0 30px 80px rgba(212, 175, 55, 0.3);
     }
 
-    .carousel-item-image-only::-webkit-scrollbar { width: 6px; }
-    .carousel-item-image-only::-webkit-scrollbar-track { background: transparent; }
-    .carousel-item-image-only::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+    /* ❌ NÃO ALTERE: Scrollbar vertical de cada template */
+    .carousel-item-image-only::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .carousel-item-image-only::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .carousel-item-image-only::-webkit-scrollbar-thumb {
+        background: var(--gold);
+        border-radius: 3px;
+    }
 
     .carousel-item-image-only img {
         width: auto;
@@ -234,6 +236,7 @@ st.markdown("""
         border-radius: 8px;
     }
 
+    /* ❌ NÃO ALTERE: Imagem dentro do link */
     .carousel-item-link img {
         width: 100%;
         height: 100%;
@@ -242,6 +245,7 @@ st.markdown("""
         border-radius: 8px;
     }
 
+    /* 5. CLIENTS (FLOATING AVATARS) */
     .client-section {
         padding: 100px 8%;
         background: #0a0a0a;
@@ -250,6 +254,7 @@ st.markdown("""
         gap: 50px;
     }
 
+    /* 6. É PARA VOCÊ QUE (CARDS NEO-BRUTALISTAS) */
     .target-card {
         padding: 50px;
         background: white;
@@ -259,6 +264,7 @@ st.markdown("""
         height: 100%;
     }
 
+    /* 7. PASSO A PASSO (VERTICAL & BOLD) */
     .step-row {
         display: flex;
         gap: 30px;
@@ -273,6 +279,7 @@ st.markdown("""
         line-height: 0.7;
     }
 
+    /* 8. PREÇOS (GLASSMORPHISM) */
     .pricing-glass {
         background: rgba(255, 255, 255, 0.03);
         backdrop-filter: blur(15px);
@@ -281,8 +288,11 @@ st.markdown("""
         border-radius: 2px;
         text-align: center;
     }
-    .pricing-glass:hover { border-color: var(--accent); }
+    .pricing-glass:hover {
+        border-color: var(--accent);
+    }
 
+    /* Botão de Alta Conversão */
     div.stButton > button {
         background: linear-gradient(90deg, #7b2cbf, #9d4edd);
         color: white;
@@ -301,6 +311,7 @@ st.markdown("""
         box-shadow: 0 0 30px rgba(123, 44, 191, 0.5);
     }
 
+    /* ❌ NÃO ALTERE: FAQ Destacado - Política de Reembolso */
     .faq-highlighted {
         background: linear-gradient(135deg, rgba(123, 44, 191, 0.2) 0%, rgba(212, 175, 55, 0.1) 100%);
         border: 2px solid var(--gold);
@@ -310,6 +321,7 @@ st.markdown("""
         box-shadow: 0 10px 50px rgba(212, 175, 55, 0.2);
     }
 
+    /* ❌ NÃO ALTERE: Título do FAQ Destacado */
     .faq-highlighted-title {
         color: var(--gold);
         font-size: 24px;
@@ -320,6 +332,7 @@ st.markdown("""
         margin-bottom: 20px;
     }
 
+    /* ❌ NÃO ALTERE: Conteúdo do FAQ Destacado */
     .faq-highlighted-content {
         color: #ffffff;
         font-size: 14px;
@@ -327,12 +340,14 @@ st.markdown("""
         font-family: 'Inter', sans-serif;
     }
 
+    /* ❌ NÃO ALTERE: Ícone de atenção */
     .faq-highlight-icon {
         font-size: 28px;
         margin-right: 10px;
         color: var(--gold);
     }
 
+    /* ✅ CONTAINER COM SCROLL VERTICAL PARA TEMPLATES */
     .template-scroll-container {
         width: 100%;
         max-width: 1000px;
@@ -347,46 +362,33 @@ st.markdown("""
         scroll-behavior: smooth;
     }
 
-    .template-scroll-container::-webkit-scrollbar { width: 12px; }
-    .template-scroll-container::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 10px; }
-    .template-scroll-container::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; border: 2px solid rgba(5,5,5,0.5); }
-    .template-scroll-container::-webkit-scrollbar-thumb:hover { background: #e8c547; }
+    /* ✅ SCROLLBAR ESTILIZADA */
+    .template-scroll-container::-webkit-scrollbar {
+        width: 12px;
+    }
 
-    .template-scroll-image { width: 100%; height: auto; display: block; border-radius: 0; }
+    .template-scroll-container::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+    }
 
-    /* ── SEÇÃO DE DÚVIDAS ── */
-    .contact-section {
-        padding: 100px 20%;
-        background: #050505;
-        border-top: 1px solid rgba(255,255,255,0.07);
+    .template-scroll-container::-webkit-scrollbar-thumb {
+        background: var(--gold);
+        border-radius: 10px;
+        border: 2px solid rgba(5, 5, 5, 0.5);
     }
-    .contact-title {
-        font-family: 'Inter', sans-serif;
-        font-size: clamp(22px, 3vw, 36px);
-        font-weight: 700;
-        color: #ffffff;
-        line-height: 1.3;
-        letter-spacing: -1px;
-        margin-bottom: 40px;
-        text-transform: none;
-    }
-    .contact-title span { color: var(--gold); }
 
-    /* inputs da seção de dúvidas */
-    .contact-section div[data-testid="stTextInput"] input,
-    .contact-section div[data-testid="stTextArea"] textarea {
-        background: rgba(255,255,255,0.04) !important;
-        border: 1px solid rgba(255,255,255,0.15) !important;
-        color: #ffffff !important;
-        border-radius: 2px !important;
-        font-family: 'Inter', sans-serif !important;
+    .template-scroll-container::-webkit-scrollbar-thumb:hover {
+        background: #e8c547;
     }
-    .contact-section div[data-testid="stTextInput"] input:focus,
-    .contact-section div[data-testid="stTextArea"] textarea:focus {
-        border-color: var(--accent) !important;
-        box-shadow: 0 0 0 1px var(--accent) !important;
+
+    /* ✅ IMAGEM DENTRO DO CONTAINER */
+    .template-scroll-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 0;
     }
-    .contact-section label { color: rgba(255,255,255,0.6) !important; font-size: 12px !important; letter-spacing: 1px !important; text-transform: uppercase !important; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -405,7 +407,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# --- HERO ---
+# --- 1 & 2. HERO SECTION ---
 st.markdown("""
 <div class="hero-section">
     <h1 class="hero-h1">Crie seu site profissional em minutos<br><span class="serif-heavy" style="color:var(--gold)">Apenas editando templates prontos.</span></h1>
@@ -416,7 +418,7 @@ st.markdown("""
 <a href="#templates" style="display: inline-block; background: linear-gradient(90deg, #7b2cbf, #9d4edd); color: white; border: none; padding: 25px 60px; font-weight: 900; font-size: 22px; text-transform: uppercase; letter-spacing: 2px; border-radius: 0; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%); text-decoration: none; transition: 0.4s; cursor: pointer;">CONHEÇA NOSSOS TEMPLATES ↓</a>
 """, unsafe_allow_html=True)
 
-# --- PROVA SOCIAL ---
+# --- 5. PROVA SOCIAL (AVATARES FLOATING) ---
 st.markdown("""
 <div id="clientes" class="client-section">
     <h2 style="font-size: 30px; letter-spacing: 0px;">CONFIE EM QUEM<br>JÁ DOMINA.</h2>
@@ -435,9 +437,10 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# --- QUEM ATENDEMOS ---
+# --- 6. É PARA VOCÊ QUE ---
 st.markdown('<div id="quem-atendemos" style="padding: 120px 8%;">', unsafe_allow_html=True)
 col_u1, col_u2, col_u3 = st.columns(3)
+
 with col_u1:
     st.markdown("""
     <div class="target-card">
@@ -445,6 +448,7 @@ with col_u1:
         <p>Que busca colocar sua empresa na internet com o menor custo do mercado, garantindo sua presença digital em minutos.</p>
     </div>
     """, unsafe_allow_html=True)
+
 with col_u2:
     st.markdown("""
     <div class="target-card" style="background: var(--accent); color: white; box-shadow: 15px 15px 0px white;">
@@ -452,6 +456,7 @@ with col_u2:
         <p>Temos estruturas otimizadas para converter visitantes em compradores reais. Destaque seus serviços com um design que transmite autoridade e confiança.</p>
     </div>
     """, unsafe_allow_html=True)
+
 with col_u3:
     st.markdown("""
     <div class="target-card">
@@ -461,15 +466,17 @@ with col_u3:
     """, unsafe_allow_html=True)
 st.markdown('</div>', unsafe_allow_html=True)
 
-# --- PASSO A PASSO ---
+# --- 7. PASSO A PASSO (INDUSTRIAL) ---
 st.markdown('<div id="como-funciona" style="padding: 100px 8%; background: #050505;">', unsafe_allow_html=True)
 st.markdown('<h2>PROCESSO <span class="serif-heavy">sem falhas.</span></h2><br><br>', unsafe_allow_html=True)
+
 steps = [
     ("SELECIONE O MODELO IDEAL", "Escolha entre mais de 30 modelos validados o que mais combina com a identidade do seu negócio."),
     ("CUSTOMIZAÇÃO RÁPIDA", "Utilize nosso ambiente exclusivo de edição para personalizar tudo o que precisar sem complicações."),
     ("SETUP TÉCNICO GRATUITO", "Hospedamos seu site em minutos, com as melhores técnicas de SEO e com domínio Streamlit sem custo adicional, de forma rápida."),
     ("LANÇAMENTO IMEDIATO", "Site no ar, otimizado e pronto para escalar seu negócio com uma estrutura de alta performance.")
 ]
+
 for i, (title, desc) in enumerate(steps):
     st.markdown(f"""
     <div class="step-row">
@@ -482,7 +489,8 @@ for i, (title, desc) in enumerate(steps):
     """, unsafe_allow_html=True)
 st.markdown('</div>', unsafe_allow_html=True)
 
-# --- TEMPLATES SHOWCASE ---
+
+# --- 3 & 4. SHOWCASE DE TEMPLATES (GRID 2D COM SCROLL) ---
 st.markdown('<div id="templates" style="padding: 120px 8%;">', unsafe_allow_html=True)
 st.markdown('<h2>Clique e explore por completo os templates ideais para <span class="serif-heavy"> seu negócio:</span></h2><br><br>', unsafe_allow_html=True)
 st.markdown("""
@@ -527,34 +535,32 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# --- PREÇOS ---
+
+
+# --- 8. PREÇOS (ELITE) ---
 st.markdown('<div id="precos" style="padding: 120px 8%; text-align:center;">', unsafe_allow_html=True)
 st.markdown('<h2>INVISTA NA SUA <span class="serif-heavy">Presença.</span></h2><br><br>', unsafe_allow_html=True)
 
 p2, p3 = st.columns(2)
 
-with p2:
-    st.markdown('<div class="pricing-glass" style="border-top:5px solid var(--accent); text-align:center;">', unsafe_allow_html=True)
-    st.markdown('<p style="color:#d4af37;letter-spacing:3px;font-weight:900;">PROFESSIONAL</p>', unsafe_allow_html=True)
-    st.markdown('<p style="color:rgba(255,255,255,0.5);font-size:13px;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">1º mês</p>', unsafe_allow_html=True)
-    st.markdown('<p style="font-size:72px;font-weight:900;line-height:1;color:#fff;margin:0;">R$ 9<span style="font-size:40px">,90</span></p>', unsafe_allow_html=True)
-    st.markdown('<div style="margin:16px auto 24px;padding:12px 20px;background:rgba(123,44,191,0.15);border:1px solid rgba(123,44,191,0.3);border-radius:4px;display:inline-block;"><p style="color:rgba(255,255,255,0.6);font-size:13px;margin:0;">Após o 1º mês</p><p style="color:#fff;font-size:22px;font-weight:900;margin:4px 0 0;">R$ 39,90<span style="font-size:13px;font-weight:400;color:rgba(255,255,255,0.5);">/mês</span></p></div>', unsafe_allow_html=True)
+with p2: # Featured
     st.markdown("""
-<p>✓ Estrutura profissional pensada para gerar clientes</p>
-<p>✓ Integração com WhatsApp via botão direto no site</p>
-<p>✓ Site publicado rapidamente após a personalização</p>
-<p>✓ Edite seu site quando quiser com um painel simples</p>
-<p>✓ Site rápido e otimizado para performance</p>
-<p>✓ Domínio e hospedagem Streamlit inclusos</p>
-<p>✓ Pagamento mensal — cancele quando quiser</p>
-<p>✓ Acesso vitalício aos templates</p>
-<p>✓ Atualizações de novos templates inclusas</p>
-<p>✓ Suporte técnico ágil</p>
-<div style="margin-top:28px;">
-<a href="https://pay.kiwify.com.br/qE6dljc" target="_blank" style="display:inline-block;background:linear-gradient(90deg,#7b2cbf,#9d4edd);color:white;text-decoration:none;padding:18px 36px;font-weight:900;font-size:15px;text-transform:uppercase;letter-spacing:2px;clip-path:polygon(8% 0,100% 0,92% 100%,0% 100%);">CRIAR MEU SITE AGORA</a>
-</div>
+    <div class="pricing-glass" style="border-top: 5px solid var(--accent);">
+        <p style="color: var(--gold); letter-spacing: 3px; font-weight: 900;">PROFESSIONAL</p>
+        <h1 style="font-size: 80px; margin: 30px 0;">R$ 49</h1>
+        <p>✓ Estrutura profissional pensada para gerar clientes</p>
+        <p>✓ Integração com WhatsApp via botão direto no site</p>
+        <p>✓ Site publicado rapidamente após a personalização</p>
+        <p>✓ Edite seu site quando quiser e o que quiser com um painel simples</p>
+        <p>✓ Site rápido e otimizado para performance</p>
+        <p>✓ Domínio e hospedagem Streamlit inclusos</p>
+        <p>✓ Pagamento mensal</p>
+        <p>✓ Acesso vitalício aos templates</p>
+        <p>✓ Atualizações de novos templates inclusas</p>
+        <p>✓ Suporte técnico ágil</p>
+    </div>
     """, unsafe_allow_html=True)
-    st.markdown('</div>', unsafe_allow_html=True)
+    st.button("CRIAR MEU SITE AGORA", key="main_p")
 
 with p3:
     st.markdown("""
@@ -575,7 +581,7 @@ with p3:
     st.button("LIBERAR ACESSO DE REVENDA", key="p3")
 st.markdown('</div>', unsafe_allow_html=True)
 
-# --- FAQ ---
+# --- 9. FAQ ---
 st.markdown('<div id="faq" style="padding: 100px 20%; background: #080808;">', unsafe_allow_html=True)
 st.markdown('<h2 style="text-align:center; font-size: 40px;">FAQ / <span class="serif-heavy">Respostas.</span></h2><br>', unsafe_allow_html=True)
 
@@ -594,67 +600,12 @@ faq = {
 }
 
 for i, (q, a) in enumerate(faq.items()):
-    if i == 0:
+    if i == 0:  # Primeiro item (Política de Reembolso) com destaque
         with st.expander(q):
             st.markdown(f"<p style='color: var(--gold); font-size: 15px; font-weight: 600;'>{a}</p>", unsafe_allow_html=True)
-    else:
+    else:  # Demais itens normais
         with st.expander(q):
             st.markdown(f"<p style='color: #ccc;'>{a}</p>", unsafe_allow_html=True)
-st.markdown('</div>', unsafe_allow_html=True)
-
-# ══════════════════════════════════════════════════════════════════
-# SEÇÃO DE DÚVIDAS
-# ══════════════════════════════════════════════════════════════════
-st.markdown('<div id="duvidas" class="contact-section">', unsafe_allow_html=True)
-st.markdown("""
-<p class="contact-title">
-    Se você tem uma necessidade ou dúvida específica que não encontrou no FAQ,<br>
-    <span>pergunte agora e receba uma resposta ágil e humana.</span>
-</p>
-""", unsafe_allow_html=True)
-
-col_a, col_b = st.columns(2)
-with col_a:
-    nome_duvida = st.text_input(
-        "SEU NOME", key="duvida_nome",
-        placeholder="Ex: João Silva")
-with col_b:
-    email_duvida = st.text_input(
-        "SEU E-MAIL", key="duvida_email",
-        placeholder="Ex: joao@email.com")
-
-mensagem_duvida = st.text_area(
-    "SUA DÚVIDA OU PROJETO",
-    key="duvida_msg",
-    height=160,
-    placeholder="Descreva aqui o seu projeto ou sua dúvida...")
-
-# Validação
-erros_duvida = []
-if "duvida_enviada" not in st.session_state:
-    st.session_state.duvida_enviada = False
-
-if not st.session_state.duvida_enviada:
-    if nome_duvida and email_duvida and "@" in email_duvida and mensagem_duvida.strip():
-        if st.button("✉️ ESCLARECER MINHA DÚVIDA", key="btn_duvida", type="primary"):
-            sucesso, erro_msg = _enviar_duvida(nome_duvida, email_duvida, mensagem_duvida)
-            if sucesso:
-                st.session_state.duvida_enviada = True
-                st.rerun()
-            else:
-                st.error(f"🔴 Erro ao enviar: {erro_msg}")
-    else:
-        st.button("✉️ ESCLARECER MINHA DÚVIDA", key="btn_duvida_dis", type="primary", disabled=True)
-        if nome_duvida or email_duvida or mensagem_duvida:
-            st.markdown("<p style='color:rgba(255,255,255,0.4);font-size:12px;letter-spacing:1px;'>Preencha nome, e-mail válido e sua dúvida para enviar.</p>", unsafe_allow_html=True)
-else:
-    st.markdown("""
-    <div style="background:rgba(123,44,191,0.15);border:1px solid rgba(123,44,191,0.4);border-radius:4px;padding:24px 28px;margin-top:10px;">
-        <p style="color:#d4af37;font-weight:900;font-size:18px;letter-spacing:1px;margin:0 0 8px;">✅ MENSAGEM ENVIADA!</p>
-        <p style="color:rgba(255,255,255,0.7);font-size:14px;margin:0;">Nossa equipe responderá no e-mail informado o mais breve possível. 😊</p>
-    </div>
-    """, unsafe_allow_html=True)
-
 st.markdown('</div>', unsafe_allow_html=True)
 
 # --- FOOTER ---
