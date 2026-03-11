@@ -534,48 +534,27 @@ st.markdown('<h2>INVISTA NA SUA <span class="serif-heavy">Presença.</span></h2>
 p2, p3 = st.columns(2)
 
 with p2:
+    st.markdown('<div class="pricing-glass" style="border-top:5px solid var(--accent); text-align:center;">', unsafe_allow_html=True)
+    st.markdown('<p style="color:#d4af37;letter-spacing:3px;font-weight:900;">PROFESSIONAL</p>', unsafe_allow_html=True)
+    st.markdown('<p style="color:rgba(255,255,255,0.5);font-size:13px;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;">1º mês</p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-size:72px;font-weight:900;line-height:1;color:#fff;margin:0;">R$ 9<span style="font-size:40px">,90</span></p>', unsafe_allow_html=True)
+    st.markdown('<div style="margin:16px auto 24px;padding:12px 20px;background:rgba(123,44,191,0.15);border:1px solid rgba(123,44,191,0.3);border-radius:4px;display:inline-block;"><p style="color:rgba(255,255,255,0.6);font-size:13px;margin:0;">Após o 1º mês</p><p style="color:#fff;font-size:22px;font-weight:900;margin:4px 0 0;">R$ 39,90<span style="font-size:13px;font-weight:400;color:rgba(255,255,255,0.5);">/mês</span></p></div>', unsafe_allow_html=True)
     st.markdown("""
-    <div class="pricing-glass" style="border-top: 5px solid var(--accent);">
-        <p style="color: var(--gold); letter-spacing: 3px; font-weight: 900; font-family: Inter, sans-serif;">PROFESSIONAL</p>
-
-        <div style="margin: 30px 0 10px;">
-            <p style="color: rgba(255,255,255,0.5); font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; font-family: Inter, sans-serif;">1º mês</p>
-            <div style="display:flex; align-items:baseline; justify-content:center; gap:6px;">
-                <span style="font-size:18px; color:rgba(255,255,255,0.5); font-weight:700; font-family: Inter, sans-serif;">R$</span>
-                <span style="font-size:72px; font-weight:900; line-height:1; color:#ffffff; font-family: Inter, sans-serif;">9</span>
-                <span style="font-size:36px; font-weight:900; color:#ffffff; font-family: Inter, sans-serif;">,90</span>
-            </div>
-        </div>
-
-        <div style="margin: 0 0 30px; padding: 12px 20px; background: rgba(123,44,191,0.15); border: 1px solid rgba(123,44,191,0.3); border-radius: 4px; display:inline-block;">
-            <p style="color: rgba(255,255,255,0.6); font-size: 13px; letter-spacing: 1px; margin: 0; font-family: Inter, sans-serif;">Após o 1º mês</p>
-            <p style="color: #ffffff; font-size: 22px; font-weight: 900; margin: 4px 0 0; letter-spacing: -1px; font-family: Inter, sans-serif;">R$ 39,90<span style="font-size:13px; font-weight:400; color:rgba(255,255,255,0.5);">/mês</span></p>
-        </div>
-
-        <p style="font-family: Inter, sans-serif;">✓ Estrutura profissional pensada para gerar clientes</p>
-        <p style="font-family: Inter, sans-serif;">✓ Integração com WhatsApp via botão direto no site</p>
-        <p style="font-family: Inter, sans-serif;">✓ Site publicado rapidamente após a personalização</p>
-        <p style="font-family: Inter, sans-serif;">✓ Edite seu site quando quiser e o que quiser com um painel simples</p>
-        <p style="font-family: Inter, sans-serif;">✓ Site rápido e otimizado para performance</p>
-        <p style="font-family: Inter, sans-serif;">✓ Domínio e hospedagem Streamlit inclusos</p>
-        <p style="font-family: Inter, sans-serif;">✓ Pagamento mensal — cancele quando quiser</p>
-        <p style="font-family: Inter, sans-serif;">✓ Acesso vitalício aos templates</p>
-        <p style="font-family: Inter, sans-serif;">✓ Atualizações de novos templates inclusas</p>
-        <p style="font-family: Inter, sans-serif;">✓ Suporte técnico ágil</p>
-
-        <div style="margin-top: 30px;">
-            <a href="https://pay.kiwify.com.br/qE6dljc" target="_blank"
-               style="display:inline-block; background: linear-gradient(90deg, #7b2cbf, #9d4edd);
-                      color: white; text-decoration: none; padding: 20px 40px;
-                      font-weight: 900; font-size: 16px; text-transform: uppercase;
-                      letter-spacing: 2px; border-radius: 0;
-                      clip-path: polygon(8% 0, 100% 0, 92% 100%, 0% 100%);
-                      font-family: Inter, sans-serif; transition: 0.4s;">
-                CRIAR MEU SITE AGORA
-            </a>
-        </div>
-    </div>
+<p>✓ Estrutura profissional pensada para gerar clientes</p>
+<p>✓ Integração com WhatsApp via botão direto no site</p>
+<p>✓ Site publicado rapidamente após a personalização</p>
+<p>✓ Edite seu site quando quiser com um painel simples</p>
+<p>✓ Site rápido e otimizado para performance</p>
+<p>✓ Domínio e hospedagem Streamlit inclusos</p>
+<p>✓ Pagamento mensal — cancele quando quiser</p>
+<p>✓ Acesso vitalício aos templates</p>
+<p>✓ Atualizações de novos templates inclusas</p>
+<p>✓ Suporte técnico ágil</p>
+<div style="margin-top:28px;">
+<a href="https://pay.kiwify.com.br/qE6dljc" target="_blank" style="display:inline-block;background:linear-gradient(90deg,#7b2cbf,#9d4edd);color:white;text-decoration:none;padding:18px 36px;font-weight:900;font-size:15px;text-transform:uppercase;letter-spacing:2px;clip-path:polygon(8% 0,100% 0,92% 100%,0% 100%);">CRIAR MEU SITE AGORA</a>
+</div>
     """, unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
 
 with p3:
     st.markdown("""
