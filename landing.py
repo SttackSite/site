@@ -543,11 +543,16 @@ st.markdown('<h2>INVISTA NA SUA <span class="serif-heavy">Presença.</span></h2>
 
 p2, p3 = st.columns(2)
 
-with p2: # Featured
+with p2: # Featured - PROFESSIONAL
     st.markdown("""
     <div class="pricing-glass" style="border-top: 5px solid var(--accent);">
         <p style="color: var(--gold); letter-spacing: 3px; font-weight: 900;">PROFESSIONAL</p>
-        <h1 style="font-size: 80px; margin: 30px 0;">R$ 49</h1>
+        <div style="margin: 30px 0;">
+            <span style="font-size: 20px; vertical-align: super; color: rgba(255,255,255,0.6);">R$</span>
+            <span style="font-size: 80px; font-weight: 900;">9,90</span>
+            <p style="font-size: 14px; color: var(--gold); margin-top: -15px; font-weight: 700;">NO PRIMEIRO MÊS</p>
+            <p style="font-size: 18px; opacity: 0.8;">Após, apenas R$ 39,90/mês</p>
+        </div>
         <p>✓ Estrutura profissional pensada para gerar clientes</p>
         <p>✓ Integração com WhatsApp via botão direto no site</p>
         <p>✓ Site publicado rapidamente após a personalização</p>
@@ -559,10 +564,12 @@ with p2: # Featured
         <p>✓ Atualizações de novos templates inclusas</p>
         <p>✓ Suporte técnico ágil</p>
     </div>
+    <div style="margin-top: -30px;">
+        <a href="https://pay.kiwify.com.br/qE6dljc" target="_blank" style="display: inline-block; background: linear-gradient(90deg, #7b2cbf, #9d4edd); color: white; border: none; padding: 25px 60px; font-weight: 900; font-size: 22px; text-transform: uppercase; letter-spacing: 2px; border-radius: 0; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%); text-decoration: none; transition: 0.4s; cursor: pointer;">CRIAR MEU SITE AGORA</a>
+    </div>
     """, unsafe_allow_html=True)
-    st.button("CRIAR MEU SITE AGORA", key="main_p")
 
-with p3:
+with p3: # BUSINESS
     st.markdown("""
     <div class="pricing-glass">
         <p>BUSINESS</p>
