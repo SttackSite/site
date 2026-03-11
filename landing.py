@@ -550,8 +550,8 @@ with p2: # Featured - PROFESSIONAL
         <div style="margin: 30px 0;">
             <span style="font-size: 20px; vertical-align: super; color: rgba(255,255,255,0.6);">R$</span>
             <span style="font-size: 80px; font-weight: 900;">9,90</span>
-            <p style="font-size: 14px; color: var(--gold); margin-top: -15px; font-weight: 700;">NO PRIMEIRO MÊS</p>
-            <p style="font-size: 18px; opacity: 0.8;">Após, apenas R$ 39,90/mês</p>
+            <p style="font-size: 14px; color: var(--gold); margin-top: -15px; font-weight: 700; text-transform: uppercase;">no primeiro mês</p>
+            <p style="font-size: 16px; opacity: 0.7; font-weight: 400;">Depois, apenas R$ 39,90/mês</p>
         </div>
         <p>✓ Estrutura profissional pensada para gerar clientes</p>
         <p>✓ Integração com WhatsApp via botão direto no site</p>
@@ -564,9 +564,36 @@ with p2: # Featured - PROFESSIONAL
         <p>✓ Atualizações de novos templates inclusas</p>
         <p>✓ Suporte técnico ágil</p>
     </div>
-    <div style="margin-top: -30px;">
-        <a href="https://pay.kiwify.com.br/qE6dljc" target="_blank" style="display: inline-block; background: linear-gradient(90deg, #7b2cbf, #9d4edd); color: white; border: none; padding: 25px 60px; font-weight: 900; font-size: 22px; text-transform: uppercase; letter-spacing: 2px; border-radius: 0; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%); text-decoration: none; transition: 0.4s; cursor: pointer;">CRIAR MEU SITE AGORA</a>
-    </div>
+    
+    <!-- BOTÃO ESTILIZADO IGUAL AO ANTERIOR -->
+    <style>
+        .btn-kiwify {
+            display: inline-block;
+            width: 100%;
+            background: linear-gradient(90deg, #7b2cbf, #9d4edd);
+            color: white !important;
+            text-decoration: none !important;
+            padding: 25px 0;
+            font-weight: 900;
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+            transition: 0.4s ease;
+            margin-top: 20px;
+            text-align: center;
+            border: none;
+        }
+        .btn-kiwify:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(123, 44, 191, 0.5);
+            color: white !important;
+        }
+    </style>
+    
+    <a href="https://pay.kiwify.com.br/qE6dljc" target="_blank" class="btn-kiwify">
+        CRIAR MEU SITE AGORA
+    </a>
     """, unsafe_allow_html=True)
 
 with p3: # BUSINESS
