@@ -692,9 +692,9 @@ st.markdown('<div class="duvida-wrap">', unsafe_allow_html=True)
 
 col_d1, col_d2 = st.columns(2)
 with col_d1:
-    duvida_nome  = st.text_input("Seu nome", placeholder="Ex: João Silva", key="duvida_nome")
+    duvida_nome  = st.text_input("Seu nome", placeholder="Seu nome", key="duvida_nome")
 with col_d2:
-    duvida_email = st.text_input("Seu e-mail", placeholder="Ex: joao@email.com", key="duvida_email")
+    duvida_email = st.text_input("Seu e-mail", placeholder="Seu e-mail (responderemos por ele)", key="duvida_email")
 
 duvida_msg = st.text_area(
     "Sua dúvida ou projeto",
