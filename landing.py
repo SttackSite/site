@@ -1,4 +1,4 @@
-    import streamlit as st
+import streamlit as st
 
 # --- CONFIGURAÇÃO DA PÁGINA ---
 st.set_page_config(
@@ -559,9 +559,8 @@ with p2: # Featured
         <p>✓ Atualizações de novos templates inclusas</p>
         <p>✓ Suporte técnico ágil</p>
     </div>
-st.markdown('<a href="https://pay.kiwify.com.br/qE6dljc" target="_blank" style="text-decoration: none;">', unsafe_allow_html=True)
-st.button("CRIAR MEU SITE AGORA", key="main_p")
-st.markdown('</a>', unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
+    st.button("CRIAR MEU SITE AGORA", key="main_p")
 
 with p3:
     st.markdown("""
