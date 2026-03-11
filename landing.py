@@ -553,7 +553,7 @@ with p2: # Featured
         <div style="margin: 30px 0;">
             <h1 style="font-size: 80px; margin-bottom: 0;">R$ 9,90</h1>
             <p style="color: var(--gold); font-weight: 900; letter-spacing: 1px; margin-top: 5px; text-transform: uppercase;">NO PRIMEIRO MÊS</p>
-            <p style="font-size: 18px; opacity: 0.6; margin-top: -5px;">Renovação automática por apenas R$ 39,90/mês</p>
+            <p style="font-size: 18px; opacity: 0.6; margin-top: -5px;">Ganhe 30 dias de acesso total para validar seu negócio. Depois, mantenha tudo ativo por apenas R$ 39,90/mês.</p>
         </div>
         <p>✓ Estrutura profissional pensada para gerar clientes</p>
         <p>✓ Integração com WhatsApp via botão direto no site</p>
