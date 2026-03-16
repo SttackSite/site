@@ -687,7 +687,7 @@ st.markdown("""
 st.markdown('<div class="duvida-section">', unsafe_allow_html=True)
 st.markdown("""
 <div class="duvida-titulo">
-    Se você precisa de um template personalizado ou tem alguma dúvida específica,
+    Se você precisa de um template personalizado ou tem alguma dúvida específica, 
     <span> nos envie agora e receba uma resposta ágil e humana.</span>
 </div>
 """, unsafe_allow_html=True)
