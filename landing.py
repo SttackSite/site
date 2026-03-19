@@ -99,11 +99,11 @@ st.markdown("""
 
     /* 1 & 2. HERO RADICAL */
     .hero-section {
-        height: 100vh;
+        min-height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 0 8%;
+        padding: 120px 8% 80px 8%;
         background: radial-gradient(circle at 80% 20%, #5800AB 0%, #050505 50%);
         border-bottom: 1px solid rgba(255,255,255,0.1);
     }
@@ -415,11 +415,32 @@ st.markdown("""
 <div class="hero-section">
     <h1 class="hero-h1">Crie seu site ou landing page profissional em minutos<br><span class="serif-heavy" style="color:var(--gold)">Apenas editando templates prontos.</span></h1>
     <p class="hero-sub">A solução ideal para quem precisa de um site ou landing page rápida, profissional e editável sem depender de agências ou programadores.</p>
-    <div style="margin-top: 50px; width: 300px;">
+    </div>
 """, unsafe_allow_html=True)
-st.markdown("""
-<a href="#templates" style="display: inline-block; background: linear-gradient(90deg, #7b2cbf, #9d4edd); color: white; border: none; padding: 25px 60px; font-weight: 900; font-size: 22px; text-transform: uppercase; letter-spacing: 2px; border-radius: 0; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%); text-decoration: none; transition: 0.4s; cursor: pointer;">CONHEÇA NOSSOS TEMPLATES ↓</a>
-""", unsafe_allow_html=True)
+
+
+# --- 7. PASSO A PASSO (INDUSTRIAL) ---
+st.markdown('<div id="como-funciona" style="padding: 100px 8%; background: #050505;">', unsafe_allow_html=True)
+st.markdown('<h2>PROCESSO <span class="serif-heavy">sem falhas.</span></h2><br><br>', unsafe_allow_html=True)
+
+steps = [
+    ("ESCOLHA SEU MODELO IDEAL", "Escolha entre mais de 30 modelos validados o que mais combina com a identidade do seu negócio."),
+    ("PERSONALIZE DO SEU JEITO", "Edite tudo o que quiser diretamente no nosso editor simples e intuitivo. Teste diferentes versões até encontrar o layout perfeito para o seu negócio."),
+    ("NÓS FINALIZAMOS PARA VOCÊ", "Após sua escolha, nossa equipe ajusta, otimiza e entrega seu site 100% pronto, com domínio e performance profissional."),
+    ("PRONTO PARA VOCÊ APROVAR", "Receba seu site finalizado e veja tudo funcionando na prática. Gostou? A ativação para manter no ar custa somente R$39,90/mês.")
+]
+
+for i, (title, desc) in enumerate(steps):
+    st.markdown(f"""
+    <div class="step-row">
+        <div class="step-num">0{i+1}</div>
+        <div>
+            <h3 style="color: var(--gold);">{title}</h3>
+            <p style="max-width: 400px; opacity: 0.6;">{desc}</p>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+st.markdown('</div>', unsafe_allow_html=True)
 
 # --- 5. PROVA SOCIAL (AVATARES FLOATING) ---
 st.markdown("""
@@ -469,33 +490,11 @@ with col_u3:
     """, unsafe_allow_html=True)
 st.markdown('</div>', unsafe_allow_html=True)
 
-# --- 7. PASSO A PASSO (INDUSTRIAL) ---
-st.markdown('<div id="como-funciona" style="padding: 100px 8%; background: #050505;">', unsafe_allow_html=True)
-st.markdown('<h2>PROCESSO <span class="serif-heavy">sem falhas.</span></h2><br><br>', unsafe_allow_html=True)
-
-steps = [
-    ("SELECIONE O MODELO IDEAL", "Escolha entre mais de 30 modelos validados o que mais combina com a identidade do seu negócio."),
-    ("CUSTOMIZAÇÃO RÁPIDA", "Utilize nosso ambiente exclusivo de edição para personalizar tudo o que precisar sem complicações."),
-    ("SETUP TÉCNICO GRATUITO", "Hospedamos seu site em minutos, com as melhores técnicas de SEO e com domínio Streamlit sem custo adicional, de forma rápida."),
-    ("LANÇAMENTO IMEDIATO", "Site no ar, otimizado e pronto para escalar seu negócio com uma estrutura de alta performance.")
-]
-
-for i, (title, desc) in enumerate(steps):
-    st.markdown(f"""
-    <div class="step-row">
-        <div class="step-num">0{i+1}</div>
-        <div>
-            <h3 style="color: var(--gold);">{title}</h3>
-            <p style="max-width: 400px; opacity: 0.6;">{desc}</p>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-st.markdown('</div>', unsafe_allow_html=True)
-
 
 # --- 3 & 4. SHOWCASE DE TEMPLATES (GRID 2D COM SCROLL) ---
 st.markdown('<div id="templates" style="padding: 120px 8%;">', unsafe_allow_html=True)
-st.markdown('<h2>Navegue lateralmente e clique para conhecer o template ideal para <span class="serif-heavy"> seu negócio:</span></h2><br><br>', unsafe_allow_html=True)
+st.markdown("""<h2>Navegue lateralmente pelos modelos e clique para ver cada um por completo.<br><span class="serif-heavy" style="color:var(--gold)">Gostou? Ao final de cada template você pode começar a editá-lo de forma simples e rápida.</span></h2>
+""", unsafe_allow_html=True)
 st.markdown("""
 <div class="carousel-section" style="padding: 0; background: transparent;">
     <div class="carousel-container">
@@ -551,9 +550,9 @@ with p2: # Featured
 <div class="pricing-glass" style="border-top: 5px solid var(--accent);">
         <p style="color: var(--gold); letter-spacing: 3px; font-weight: 900;">PROFESSIONAL</p>
         <div style="margin: 30px 0;">
-            <h1 style="font-size: 80px; margin-bottom: 0;">R$ 9,90</h1>
-            <p style="color: var(--gold); font-weight: 900; letter-spacing: 1px; margin-top: 5px; text-transform: uppercase;">NO PRIMEIRO MÊS</p>
-            <p style="font-size: 18px; opacity: 0.6; margin-top: -5px;">Ganhe 30 dias de acesso total para validar seu negócio. Depois, mantenha tudo ativo por apenas R$ 39,90/mês.</p>
+            <h1 style="font-size: 80px; margin-bottom: 0;">R$ 0,00</h1>
+            <p style="color: var(--gold); font-weight: 900; letter-spacing: 1px; margin-top: 5px; text-transform: uppercase;">SEM PAGAMENTO INICIAL</p>
+            <p style="font-size: 18px; opacity: 0.6; margin-top: -5px;">Ganhe 7 dias de acesso total para validar seu negócio. Só ativa por R$39,90/mês se gostar do resultado</p>
         </div>
         <p>✓ Estrutura profissional pensada para gerar clientes</p>
         <p>✓ Integração com WhatsApp via botão direto no site</p>
@@ -567,7 +566,6 @@ with p2: # Featured
         <p>✓ Suporte técnico ágil</p>
     </div>
     """, unsafe_allow_html=True)
-    st.link_button("CRIAR MEU SITE AGORA", "https://pay.kiwify.com.br/fY9Kis9")
 
 with p3:
     st.markdown("""
@@ -585,8 +583,6 @@ with p3:
         <p>✓ Selo de parceiro desenvolvedor</p>
     </div>
     """, unsafe_allow_html=True)
-    st.button("LIBERAR ACESSO DE REVENDA", key="p3")
-st.markdown('</div>', unsafe_allow_html=True)
 
 # --- 9. FAQ ---
 st.markdown('<div id="faq" style="padding: 100px 20%; background: #080808;">', unsafe_allow_html=True)
