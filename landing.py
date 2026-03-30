@@ -616,8 +616,9 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-GMAIL_USER    = st.secrets.get("GMAIL_USER", "")
-GMAIL_PASS    = st.secrets.get("GMAIL_PASS", "")
+import os
+GMAIL_USER    = os.environ.get("GMAIL_USER", "")
+GMAIL_PASS    = os.environ.get("GMAIL_PASS", "")
 DESTINO_EMAIL = "sttacksite@gmail.com"
 
 st.markdown("""
